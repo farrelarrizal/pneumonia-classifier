@@ -1,9 +1,11 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, ConversationHandler, MessageHandler, PrefixHandler, filters
 import os, model
-from dotenv import load_dotenv
+import yaml
 
-TOKEN = '6106399754:AAFSZYKa774kDE2aaozTwIs6n20UH0PQrAA'
+config = yaml.safe_load(open('config.yaml'))
+
+TOKEN = config['BOT_TOKEN']
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):

@@ -1,9 +1,8 @@
 data
 storage
 venv
-venv2
-venv3
-model
+*.h5
 .idea
 .ipynb_checkpoints
 __pycache__
+config.yaml
